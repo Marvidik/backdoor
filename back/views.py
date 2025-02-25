@@ -11,4 +11,4 @@ class PingView(APIView):
         if model_status and model_status.is_active:
             return Response({"message": "Pong!"}, status=status.HTTP_200_OK)
         else:
-             return Response({"error": "Model is inactive"}, status=status.HTTP_226_IM_USED) 
+              return Response({"error": "Model is inactive"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR) 
